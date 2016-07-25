@@ -1,0 +1,6 @@
+[package]
+name = "my-first-rust-web-app"
+version = "0.1.0"
+authors = ["Benjamin Kampmann <ben@create-build-execute.com>"]
+
+[dependencies]
