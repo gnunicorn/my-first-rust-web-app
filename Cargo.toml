@@ -4,4 +4,5 @@ version = "0.1.0"
 authors = ["Benjamin Kampmann <ben@create-build-execute.com>"]
 
 [dependencies]
-iron = "*"
+iron = "0.4.0"
+router = "0.2.0"
