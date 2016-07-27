@@ -2,6 +2,8 @@
 extern crate iron;
 extern crate handlebars_iron as hbs;
 extern crate urlencoded;
+extern crate staticfile;
+extern crate mount;
 
 #[macro_use]
 extern crate router;
@@ -12,9 +14,13 @@ use iron::status;
 use router::Router;
 use std::str::FromStr;
 
+use staticfile::Static;
+
 use hbs::{Template, HandlebarsEngine, DirectorySource};
 use urlencoded::UrlEncodedQuery;
 use std::collections::HashMap;
+use std::path::Path;
+use mount::Mount;
 
 fn meter2feet(req: &mut Request) -> IronResult<Response> {
 
@@ -56,6 +62,10 @@ fn main() {
     chain.link_after(hbse);
 
 
+    let mut mount = Mount::new();
+    mount.mount("/assets/", Static::new(Path::new("assets/")));
+    mount.mount("/", chain);
+
     println!("Server running at http://localhost:6767/");
-    Iron::new(chain).http("localhost:6767").unwrap();
+    Iron::new(mount).http("localhost:6767").unwrap();
 }
