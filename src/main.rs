@@ -1,7 +1,7 @@
 #[macro_use] extern crate nickel;
 
 use std::collections::HashMap;
-use nickel::{Nickel, HttpRouter, QueryString};
+use nickel::{Nickel, HttpRouter, QueryString, StaticFilesHandler, Mount};
 use std::str::FromStr;
 
 fn main() {
@@ -17,5 +17,8 @@ fn main() {
         }
         return response.render("templates/meter2feet.tpl", &data);
     });
+
+    server.utilize(Mount::new("/assets/",
+        StaticFilesHandler::new("assets/")));
     server.listen("127.0.0.1:6767");
 }
