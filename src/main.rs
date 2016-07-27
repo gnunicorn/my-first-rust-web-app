@@ -20,5 +20,6 @@ fn main() {
 
     server.utilize(Mount::new("/assets/",
         StaticFilesHandler::new("assets/")));
+    server.utilize(StaticFilesHandler::new("assets/"));
     server.listen("127.0.0.1:6767");
 }
