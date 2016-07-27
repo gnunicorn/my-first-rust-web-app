@@ -27,15 +27,15 @@ Attempt to build the basic app using [Nickel (version 0.8.1)](http://nickel.rs/)
  - nickel-stage-6: adding Redis (database) support
 
 
- ## Iron
+## Iron
 
- _incomplete_
+_incomplete_
 
- Attempt to build the basic app using [Iron (version 0.4.0)](http://ironframework.io/) and dependencies. Tagged as follows:
+Attempt to build the basic app using [Iron (version 0.4.0)](http://ironframework.io/) and dependencies. Tagged as follows:
 
-  - iron-stage-1: adding basic Iron server, Hello world
-  - iron-stage-2: adding actual route and handler
-  - iron-stage-3: adding templating (handlebars) and forms
+ - iron-stage-1: adding basic Iron server, Hello world
+ - iron-stage-2: adding actual route and handler
+ - iron-stage-3: adding templating (handlebars) and forms
 
 
 # License
