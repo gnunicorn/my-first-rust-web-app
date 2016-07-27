@@ -4,5 +4,7 @@ version = "0.1.0"
 authors = ["Benjamin Kampmann <ben@create-build-execute.com>"]
 
 [dependencies]
-iron = "0.4.0"
-router = "0.2.0"
+iron = "^0.4.0"
+handlebars-iron = { git = "https://github.com/sunng87/handlebars-iron", branch = "feature/iron-4.0" }
+router = "^0.2.0"
+urlencoded = "*"
