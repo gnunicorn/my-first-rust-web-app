@@ -5,3 +5,4 @@ authors = ["Benjamin Kampmann <ben@create-build-execute.com>"]
 
 [dependencies]
 nickel = "*"
+redis = "*"

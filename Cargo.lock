@@ -3,6 +3,7 @@ name = "my-first-rust-web-app"
 version = "0.1.0"
 dependencies = [
  "nickel 0.8.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "redis 0.7.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -178,6 +179,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "redis"
+version = "0.7.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "sha1 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "url 1.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
 name = "regex"
 version = "0.1.73"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -210,6 +220,11 @@ dependencies = [
 [[package]]
 name = "semver"
 version = "0.1.20"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "sha1"
+version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]

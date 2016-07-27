@@ -22,13 +22,16 @@
 <body>
   <div id="main">
     <img src="/assets/logo.png" />
-    <h1>Tools</h1>
-    <ul>
-      <li>
-        <a href="/convert/meter2feet">Convert Meter 2 Feet</a>
-        <a href="/convert/currency/USD-EUR/">Convert USD to EUR</a>
-      </li>
-    </ul>
+    <form method="GET" action="#">
+      <h1>{{currency}} ({{rate}})</h1>
+      <label for="source">
+        <input type="text" id="source" name="source" value="{{source}}" />
+      </label>
+      <button type="submit"> = </button>
+      <label>
+        {{result}}
+      </label>
+    </form>
   </div>
 </body>
 </html>
